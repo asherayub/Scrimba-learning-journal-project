@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+.header {
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+.header h1 {
+  font-size: 1.5rem;
+  margin-left: 0.2em;
+}
+.fa-bars {
+  font-size: 1.5em;
+  position: absolute;
+  top: 0.9em;
+  right: 0.5em;
+  cursor: pointer;
+}
+nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  transform: translateX(1000px);
+  height: 100vh;
+  background-color: #ffffff7e;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  transition: transform 300ms ease-in-out;
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+nav ul li {
+  list-style: none;
+  margin: 0 1em;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.1em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.banner {
+  background-image: url("https://images.unsplash.com/photo-1669231838364-827ad65ee9a8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+  color: #fff;
+  height: 400px;
+  width: 100%;
+  padding-top: 5em;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.banner small {
+  text-transform: uppercase;
+}
+.banner h2 {
+  font-size: 2em;
+  font-weight: bolder;
+  margin-block: 0.5em;
+}
+.banner p {
+  line-height: 1.5;
+  font-size: 1.1rem;
+}
+
+.card {
+  margin: 1em;
+  cursor: pointer;
+}
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 300ms ease-in-out;
+}
+.card:hover img,
+.card:active .card img {
+  transform: scale(1.05);
+}
+.card h2 {
+  font-weight: 600;
+}
+.card p {
+  font-size: 1.1rem;
+}
+.card p,
+h2 {
+  margin: 0.5em 0;
+  line-height: 1.4;
+}
+.card h3 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  color: #fff;
+  background-color: #202020;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* line-height: 1.4; */
+}
+@media (min-width: 750px) {
+  .header {
+    justify-content: space-between;
+  }
+  .header h1 {
+    font-size: 2.5rem;
+  }
+  nav {
+    all: unset !important;
+  }
+  .fa-bars {
+    display: none;
+  }
+  nav ul {
+    flex-direction: row;
+  }
+  .banner {
+    height: 650px;
+  }
+  .banner h2 {
+    font-size: 3em;
+  }
+  .banner p {
+    line-height: 1.5;
+    font-size: 1.5rem;
+  }
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card {
+    width: 30%;
+    margin: 1em;
+    flex: 1 1 30%;
+  }
+  .what-i-did {
+    margin: 0 5em;
+  }
+
+  .about_me1 {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    align-items: center;
+    margin-block: 2em;
+  }
+  .about_me1 div {
+    width: 75%;
+  }
+  .about_me1 img {
+  }
+}
+
+/* About */
+.about_me {
+  padding: 1.5em;
+  padding-top: 5em;
+}
+.about_me img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.about_me h1 {
+  font-size: 2em;
+  font-weight: 900;
+  margin: 0.5em 0;
+}
+.about_me p {
+  line-height: 1.4;
+  font-size: 1.1rem;
+  margin: 0.5em 0;
+}
+.about_me strong {
+  font-size: 1.2rem;
+}
+h3 {
+  text-align: center;
+}
+/* the view more/recent posts link */
+.link {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000;
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
