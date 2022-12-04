@@ -30,7 +30,7 @@ nav {
   position: absolute;
   top: 0;
   right: 0;
-  width: 50%;
+  width: 60%;
   transform: translateX(1000px);
   height: 100vh;
   background-color: #ffffff7e;
@@ -50,11 +50,26 @@ nav ul li {
   margin: 0 1em;
 }
 nav ul li a {
+  padding: 0.2em;
   text-decoration: none;
   color: #000;
   font-size: 1.1em;
   font-weight: 600;
   text-transform: uppercase;
+  position: relative;
+}
+nav ul li a::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 300ms ease-in-out;
+}
+nav ul li a:hover::after {
+  width: 100%;
 }
 
 .banner {
